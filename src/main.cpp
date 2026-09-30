@@ -4,9 +4,11 @@
 #include <bn_core.h>
 
 int main() {
-    bn::backdrop::set_color(bn::color(20, 20, 31));
-
+    bn::core::init(); 
     while (true) {
+        bn::backdrop::set_color(bn::color(20,20,31));
         bn::core::update();
+        bn::backdrop::set_color(bn::color(11,11,0)); 
+        bn::core::update(); 
     }
 }
